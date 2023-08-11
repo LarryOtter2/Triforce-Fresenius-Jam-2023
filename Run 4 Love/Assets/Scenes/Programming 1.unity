@@ -273,6 +273,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87dc5b64dba85114b908d9f2ab64180b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontal: 0
+  currentSpeed: 0
+  jumpingPower: 16
+  runSpeed: 2
+  isFacingRight: 0
+  rb: {fileID: 603896878}
+  groundcheck: {fileID: 1629589090}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!212 &603896875
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -336,7 +346,8 @@ Transform:
   m_LocalPosition: {x: -8.53, y: -0.71, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1629589090}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -373,9 +384,9 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 2
   m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_Interpolate: 1
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!1 &619394800
 GameObject:
@@ -499,7 +510,7 @@ GameObject:
   - component: {fileID: 788764668}
   - component: {fileID: 788764669}
   - component: {fileID: 788764670}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -514,8 +525,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 788764667}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.2797, y: -6.411804, z: -0.17558333}
-  m_LocalScale: {x: 37.007442, y: 1, z: 1}
+  m_LocalPosition: {x: 0.0648, y: -6.411804, z: -0.17558333}
+  m_LocalScale: {x: 39.438835, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1626353354}
@@ -630,4 +641,35 @@ Transform:
   - {fileID: 788764668}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1629589089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1629589090}
+  m_Layer: 0
+  m_Name: Ground Check
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1629589090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629589089}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.02, y: -1.01, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 603896876}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
