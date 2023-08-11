@@ -17,6 +17,8 @@ public class Menu : MonoBehaviour
     
     [SerializeField] Victory victoryScreen;
 
+    [SerializeField] GameOver losingScreen;
+
 
     void Awake()
     {
@@ -31,7 +33,7 @@ public class Menu : MonoBehaviour
     {
         OnEsc();
 
-        if (inMainM == true || inPauseM == true || victoryScreen.isWinning == true)
+        if (inMainM == true || inPauseM == true || victoryScreen.isWinning == true || losingScreen.isLosing == true)
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.Confined;
@@ -87,7 +89,7 @@ public class Menu : MonoBehaviour
     //Esc
     public void OnEsc()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !victoryScreen.isWinning)
+        if (Input.GetKeyDown(KeyCode.Escape) && !victoryScreen.isWinning && !losingScreen.isLosing)
         {
             
 
