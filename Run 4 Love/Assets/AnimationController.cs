@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class AnimationController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] GameObject player;
+    [SerializeField] PlayerMovement plMovement;
+    [SerializeField] Animator animator;
+
+
+    private void Awake()
     {
-        
+        plMovement = player.GetComponent<PlayerMovement>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+
+        if(plMovement.isGrounded() == true && plMovement.isMoving == true)
+        {
+            animator.SetBool("IsMoving", true);
+        } 
+        else { animator.SetBool("IsMoving", false); }
+
+
+        animator.SetBool("IsSlim", plMovement.isSlim);
     }
+
 }

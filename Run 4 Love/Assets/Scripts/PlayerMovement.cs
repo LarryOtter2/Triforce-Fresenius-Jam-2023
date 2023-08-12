@@ -15,7 +15,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundcheck;
     [SerializeField] private LayerMask groundLayer;
 
-    [SerializeField] private bool isSlim;
+    [SerializeField] public bool isSlim;
+    [SerializeField] public bool isMoving;
 
     private void Start()
     {
@@ -34,9 +35,13 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
 
+        if(rb.velocity.x <= 0.1f)
+        {
+            isMoving = true;
+        } else if(rb.velocity.x == 0f) { isMoving = false; }
     }
 
-    private bool  isGrounded()
+    public bool  isGrounded()
     {
         return Physics2D.OverlapCircle(groundcheck.position, 0.2f, groundLayer);
     }
