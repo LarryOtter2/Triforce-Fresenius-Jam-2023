@@ -9,6 +9,8 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     float moveSpeed = 3f;
 
+    [SerializeField] Animator animator;
+
     Rigidbody2D rb;
 
     bool facingRight = false;
@@ -65,14 +67,17 @@ public class EnemyMovement : MonoBehaviour
             {
             case "CliffJump":
                 rb.AddForce(Vector2.up * 800f);
+                animator.SetTrigger("Jump");
                 break;
 
             case "LargeJump":
                 rb.AddForce(Vector2.up * 650f);
+                animator.SetTrigger("Jump");
                 break;
 
             case "SmallJump":
                 rb.AddForce(Vector2.up * 450f);
+                animator.SetTrigger("Jump");
                 break;
             }
         }
