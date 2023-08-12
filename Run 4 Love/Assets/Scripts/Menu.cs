@@ -24,9 +24,6 @@ public class Menu : MonoBehaviour
     {
         MainMenu();
         Cursor.lockState = CursorLockMode.Confined;
-        
-
-
     }
 
     private void Update()

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - SmallJump
   - LargeJump
+  - Enemy
+  - CliffJump
   layers:
   - Default
   - TransparentFX

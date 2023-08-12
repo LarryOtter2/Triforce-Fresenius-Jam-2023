@@ -39,6 +39,7 @@ public class EnemyMovement : MonoBehaviour
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
     }
 
+    /*
     void LateUpdate()
     {
         CheckWhereToFace();
@@ -56,19 +57,23 @@ public class EnemyMovement : MonoBehaviour
 
         transform.localScale = localScale;
     }
+    */
 
     void OnTriggerEnter2D(Collider2D col)
     {
         switch (col.tag)
             {
+            case "CliffJump":
+                rb.AddForce(Vector2.up * 800f);
+                break;
 
             case "LargeJump":
-                rb.AddForce(Vector2.up * 600f);
+                rb.AddForce(Vector2.up * 650f);
                 break;
 
             case "SmallJump":
                 rb.AddForce(Vector2.up * 450f);
                 break;
-                    }
+            }
         }
     }
