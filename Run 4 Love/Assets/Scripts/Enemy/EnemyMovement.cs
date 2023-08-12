@@ -28,17 +28,18 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      /*
-         if (transform.position.x < 9f)
-            dirX = -1f;
-        else if (transform.position.x > -9f)
-            dirX = 1f;
-      */
+        /*
+           if (transform.position.x < 9f)
+              dirX = -1f;
+          else if (transform.position.x > -9f)
+              dirX = 1f;
+        */
+        rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
     }
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
+       
     }
 
     /*
