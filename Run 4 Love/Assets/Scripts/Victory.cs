@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.EventSystems;
 
 public class Victory : MonoBehaviour
 {
@@ -19,12 +20,14 @@ public class Victory : MonoBehaviour
         Time.timeScale = 0;
     }
 
+    
     void LosingUI()
     { 
-        GameOverScreen.SetActive(false);
+        GameOverScreen.SetActive(true);
         isLosing = true;
         Time.timeScale = 0;
     }
+    
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -32,10 +35,13 @@ public class Victory : MonoBehaviour
         {
             VictoryUI();
         }
+
+        
         else
         {
             LosingUI();
         }
+        
     }
 
 }
