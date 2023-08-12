@@ -2185,6 +2185,7 @@ MonoBehaviour:
     m_Bits: 64
   isSlim: 0
   isMoving: 0
+  animator: {fileID: 2041850008}
 --- !u!4 &603896876
 Transform:
   m_ObjectHideFlags: 0
