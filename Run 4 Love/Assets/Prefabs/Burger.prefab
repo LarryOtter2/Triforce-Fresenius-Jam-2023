@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2256095511540783294}
   - component: {fileID: 2256095511540783295}
+  - component: {fileID: 4637694122862004409}
   m_Layer: 0
   m_Name: Burger
   m_TagString: Untagged
@@ -47,6 +48,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rottingZone: -15
+--- !u!58 &4637694122862004409
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2256095511540783288}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.01, y: -0.04}
+  serializedVersion: 2
+  m_Radius: 0.25
 --- !u!1 &2256095511626052034
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,8 +74,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2256095511626052033}
   - component: {fileID: 2256095511626052039}
-  - component: {fileID: 1369002799945698987}
-  - component: {fileID: 5303315050428488378}
+  - component: {fileID: 7913434006369931214}
   m_Layer: 0
   m_Name: Burger
   m_TagString: Untagged
@@ -134,23 +150,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &1369002799945698987
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2256095511626052034}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.000000059604645, y: -0.025795996}
-  serializedVersion: 2
-  m_Radius: 0.30420393
---- !u!114 &5303315050428488378
+--- !u!114 &7913434006369931214
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,10 +159,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2256095511626052034}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83db3141483740f40ab05e8fabf669e1, type: 3}
+  m_Script: {fileID: 11500000, guid: 397df7fc7bf4abe4da21cea1a4f3b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerupEffect: {fileID: 0}
 --- !u!1 &5087877055889534478
 GameObject:
   m_ObjectHideFlags: 0

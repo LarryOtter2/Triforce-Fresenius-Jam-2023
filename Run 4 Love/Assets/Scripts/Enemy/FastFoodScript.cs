@@ -23,4 +23,5 @@ public class FastFoodScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
+   
 }

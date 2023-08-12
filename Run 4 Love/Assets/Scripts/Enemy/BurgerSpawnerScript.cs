@@ -19,7 +19,7 @@ public class BurgerSpawnerScript : MonoBehaviour
     {
         if (timer < spawneRate)
         {
-            timer = timer + Time.deltaTime;
+            timer += Time.deltaTime;
         }
         else
         {
