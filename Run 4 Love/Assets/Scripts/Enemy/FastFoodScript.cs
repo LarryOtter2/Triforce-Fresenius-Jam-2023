@@ -23,5 +23,14 @@ public class FastFoodScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
-   
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
