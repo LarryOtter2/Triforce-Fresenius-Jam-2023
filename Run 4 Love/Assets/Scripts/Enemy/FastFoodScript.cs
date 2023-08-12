@@ -7,10 +7,11 @@ public class FastFoodScript : MonoBehaviour
     public float moveSpeed = 5;
     public float rottingZone = -15;
 
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -24,13 +25,19 @@ public class FastFoodScript : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
 
         {
-            Destroy(gameObject);
-        }
-    }
+            PlayerMovement playerMovement = collision.GetComponent<PlayerMovement>();
+            if (playerMovement != null)
+            {
+                playerMovement.ApplySlowdown();
+                Destroy(gameObject);
+            }
 
+        }
+
+    }
 }
