@@ -29,6 +29,7 @@ public class FastFoodScript : MonoBehaviour
             PlayerMovement playerMovement = collision.GetComponent<PlayerMovement>();
             if (playerMovement != null)
             {
+                playerMovement.ExtendFatTimer();
                 playerMovement.ApplySlowdown();
                 Destroy(gameObject);
             }

@@ -1583,11 +1583,13 @@ MonoBehaviour:
   horizontal: 0
   currentSpeed: 0
   jumpingPower: 11
-  runSpeed: 4.5
   isFacingRight: 1
-  normalSpeed: 5
+  fatSpeed: 5
   slowedSpeed: 2
   slowdownDuration: 2
+  slimSpeed: 6
+  fatDuration: 10
+  extraFatDuration: 5
   rb: {fileID: 603896878}
   groundcheck: {fileID: 1629589090}
   groundLayer:
