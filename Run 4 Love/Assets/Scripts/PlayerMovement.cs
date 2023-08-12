@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] public bool isSlim;
     [SerializeField] public bool isMoving;
+    [SerializeField] Animator animator;
 
     private void Start()
     {
@@ -33,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetButtonDown("Jump") && isGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            animator.SetTrigger("isJumping");
         }
 
         if(rb.velocity.x <= 0.1f)
