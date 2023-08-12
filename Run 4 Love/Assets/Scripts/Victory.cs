@@ -37,7 +37,7 @@ public class Victory : MonoBehaviour
         }
 
         
-        else
+        else if(other.gameObject.tag == "Enemy")
         {
             LosingUI();
         }

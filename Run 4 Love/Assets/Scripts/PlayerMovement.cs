@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundcheck;
     [SerializeField] private LayerMask groundLayer;
 
+    [SerializeField] private bool isSlim;
+
     private void Start()
     {
         currentSpeed = runSpeed;
@@ -22,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        currentSpeed = runSpeed;
+        
 
         horizontal = Input.GetAxisRaw("Horizontal");
 
