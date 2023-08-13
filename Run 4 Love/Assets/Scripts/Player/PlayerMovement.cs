@@ -89,9 +89,13 @@ public class PlayerMovement : MonoBehaviour
 
     public void ApplySlowdown()
     {
-        isSlowed = true;
-        slowdownTimer = slowdownDuration;
-        currentSpeed = slowedSpeed;
+        if(isSlim == false)
+        {
+            isSlowed = true;
+            slowdownTimer = slowdownDuration;
+            currentSpeed = slowedSpeed;
+        }
+       
     }
 
     // Funktion, um den Fattimer zu verlängern
