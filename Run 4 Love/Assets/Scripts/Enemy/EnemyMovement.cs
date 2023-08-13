@@ -17,6 +17,9 @@ public class EnemyMovement : MonoBehaviour
 
     Vector3 localScale;
 
+    [SerializeField] Transform player;
+    [SerializeField] public bool inFront;
+
     // Use this for initialization
     void Start()
     {
@@ -35,6 +38,12 @@ public class EnemyMovement : MonoBehaviour
               dirX = 1f;
         */
         
+        if(player.position.x > transform.position.x)
+        {
+            inFront = true;
+        }
+        else { inFront = false; }
+
     }
 
     void FixedUpdate()

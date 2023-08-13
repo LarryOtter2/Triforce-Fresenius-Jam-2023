@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rottingZone: -15
+  enemy: {fileID: 1539500267990798508, guid: dc44f527d8a46974c8368fec49b79fba, type: 3}
 --- !u!58 &4637694122862004409
 CircleCollider2D:
   m_ObjectHideFlags: 0
