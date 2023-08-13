@@ -1601,7 +1601,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &261922042
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7336,7 +7336,7 @@ GameObject:
   - component: {fileID: 1921402282}
   - component: {fileID: 1921402281}
   m_Layer: 0
-  m_Name: Audio Mangaer
+  m_Name: Audio Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7356,7 +7356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSounds:
   - name: BGM
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 915650267fde81848a703567f83f4328, type: 3}
   sfxSounds: []
   musicSource: {fileID: 1678172584}
   sfxSource: {fileID: 2090822403}
