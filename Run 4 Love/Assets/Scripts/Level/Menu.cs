@@ -21,6 +21,8 @@ public class Menu : MonoBehaviour
 
     [SerializeField] Animator animTitle;
     [SerializeField] Animator animBackground;
+    [SerializeField] Animator buttonPlay;
+    [SerializeField] Animator buttonQuit;
 
     void Awake()
     {
@@ -115,9 +117,12 @@ public class Menu : MonoBehaviour
     {
         animTitle.SetTrigger("Play");
         animBackground.SetTrigger("Play");
+        buttonPlay.SetTrigger("Play");
+        buttonQuit.SetTrigger("Play");
+
         // Warte eine gewisse Zeit, während die Animation abgespielt wird
         Debug.Log("Animation played.");
-        float animationDuration = 0.5f; 
+        float animationDuration = 0.4f; 
         yield return new WaitForSeconds(animationDuration);
 
         // Deaktiviere das Hauptmenü und setze Time.timeScale auf 1

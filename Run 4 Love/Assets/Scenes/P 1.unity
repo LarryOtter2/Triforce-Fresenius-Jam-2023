@@ -674,6 +674,7 @@ GameObject:
   - component: {fileID: 120716811}
   - component: {fileID: 120716810}
   - component: {fileID: 120716809}
+  - component: {fileID: 120716812}
   m_Layer: 5
   m_Name: Button Play
   m_TagString: Untagged
@@ -796,6 +797,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120716807}
   m_CullTransparentMesh: 1
+--- !u!95 &120716812
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120716807}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1116ff294c2a7eb41832fbeda2d1532b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &121635195
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,6 +879,8 @@ MonoBehaviour:
   losingScreen: {fileID: 1797321954}
   animTitle: {fileID: 1893333007}
   animBackground: {fileID: 778406272}
+  buttonPlay: {fileID: 120716812}
+  buttonQuit: {fileID: 1811853251}
 --- !u!1 &162837142
 GameObject:
   m_ObjectHideFlags: 0
@@ -1715,7 +1739,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 259.01862, y: 10.8}
+  m_Size: {x: 260.02246, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1729,7 +1753,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491228626}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 114.8385, y: 0.3380108, z: 34.12601}
+  m_LocalPosition: {x: 115.3404, y: 0.3380108, z: 34.12601}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5303,11 +5327,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6026459678253270554, guid: 9d06e88e39509e54c952518d06c3b886, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10.179531
+      value: 11.171017
       objectReference: {fileID: 0}
     - target: {fileID: 6026459678253270554, guid: 9d06e88e39509e54c952518d06c3b886, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44.84
+      value: 45.3356
       objectReference: {fileID: 0}
     - target: {fileID: 6026459678253270555, guid: 9d06e88e39509e54c952518d06c3b886, type: 3}
       propertyPath: m_Size.x
@@ -6440,6 +6464,7 @@ GameObject:
   - component: {fileID: 1811853250}
   - component: {fileID: 1811853249}
   - component: {fileID: 1811853248}
+  - component: {fileID: 1811853251}
   m_Layer: 5
   m_Name: Button quit
   m_TagString: Untagged
@@ -6562,6 +6587,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811853246}
   m_CullTransparentMesh: 1
+--- !u!95 &1811853251
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811853246}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b77344757572dac49a3c580a00ac1a98, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1818061811
 PrefabInstance:
   m_ObjectHideFlags: 0
