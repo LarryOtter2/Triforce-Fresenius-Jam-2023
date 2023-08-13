@@ -8,8 +8,6 @@ public class BurgerSpawnerScript : MonoBehaviour
     public float spawneRate = 2;
     private float timer = 0;
 
-    [SerializeField] EnemyMovement enemyMovement;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -29,12 +27,11 @@ public class BurgerSpawnerScript : MonoBehaviour
             timer = 0;
         }
 
-        
+
     }
 
     void spawnBurger()
     {
-        GameObject currentBurger = Instantiate(burger, transform.position, transform.rotation);
-        currentBurger.GetComponent<FastFoodScript>().Instantiated(enemyMovement);
+        Instantiate(burger, transform.position, transform.rotation);
     }
 }

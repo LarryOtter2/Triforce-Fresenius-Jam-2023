@@ -7,29 +7,18 @@ public class FastFoodScript : MonoBehaviour
     public float moveSpeed = 5;
     public float rottingZone = -15;
 
-    
-    private EnemyMovement enemyMovement;
 
-    private int moveDirection; // 1 for moving left, -1 for moving right
 
-    
+
 
     void Update()
     {
-        transform.position = transform.position + (Vector3.right * moveSpeed * moveDirection) * Time.deltaTime;
-
-        if (enemyMovement.inFront == true)
-        {
-            moveDirection = 1; // Set moveDirection to -1 if inFront is true
-        }
-        else { moveDirection = -1; }
+        transform.position = transform.position + (Vector3.left * moveSpeed) * Time.deltaTime;
 
         if (transform.position.x < rottingZone)
         {
             Destroy(gameObject);
         }
-        
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -47,10 +36,5 @@ public class FastFoodScript : MonoBehaviour
 
         }
 
-    }
-
-    public void Instantiated(EnemyMovement x)
-    {
-        enemyMovement = x;
     }
 }
