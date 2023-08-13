@@ -13,8 +13,6 @@ public class EnemyMovement : MonoBehaviour
 
     Rigidbody2D rb;
 
-    bool facingRight = false;
-
     Vector3 localScale;
 
     [SerializeField] Transform player;
