@@ -620,6 +620,7 @@ MonoBehaviour:
   victoryScreen: {fileID: 578219500}
   losingScreen: {fileID: 1797321954}
   animTitle: {fileID: 1893333007}
+  animBackground: {fileID: 778406272}
 --- !u!1 &162837142
 GameObject:
   m_ObjectHideFlags: 0
