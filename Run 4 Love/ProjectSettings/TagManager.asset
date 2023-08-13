@@ -8,6 +8,8 @@ TagManager:
   - LargeJump
   - Enemy
   - CliffJump
+  - Burger
+  - Fail
   layers:
   - Default
   - TransparentFX

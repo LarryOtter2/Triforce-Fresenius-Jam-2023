@@ -23,6 +23,7 @@ public class Menu : MonoBehaviour
     [SerializeField] Animator animBackground;
     [SerializeField] Animator buttonPlay;
     [SerializeField] Animator buttonQuit;
+    [SerializeField] Animator note;
 
     void Awake()
     {
@@ -119,6 +120,7 @@ public class Menu : MonoBehaviour
         animBackground.SetTrigger("Play");
         buttonPlay.SetTrigger("Play");
         buttonQuit.SetTrigger("Play");
+        note.SetTrigger("Play");
 
         // Warte eine gewisse Zeit, während die Animation abgespielt wird
         Debug.Log("Animation played.");
