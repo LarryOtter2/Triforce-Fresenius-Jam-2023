@@ -1739,7 +1739,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 260.02246, y: 10.8}
+  m_Size: {x: 270.5778, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1753,7 +1753,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491228626}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 115.3404, y: 0.3380108, z: 34.12601}
+  m_LocalPosition: {x: 120.6181, y: 0.3380108, z: 34.12601}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2499,12 +2499,12 @@ MonoBehaviour:
   currentSpeed: 0
   jumpingPower: 11
   isFacingRight: 1
-  fatSpeed: 5
+  fatSpeed: 4.1
   slowedSpeed: 2
-  slowdownDuration: 2
-  slimSpeed: 6
-  fatDuration: 2
-  extraFatDuration: 5
+  slowdownDuration: 3
+  slimSpeed: 5
+  fatDuration: 10
+  extraFatDuration: 7
   rb: {fileID: 603896878}
   groundcheck: {fileID: 1629589090}
   groundLayer:
@@ -5327,11 +5327,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6026459678253270554, guid: 9d06e88e39509e54c952518d06c3b886, type: 3}
       propertyPath: m_LocalScale.x
-      value: 11.171017
+      value: 14.942507
       objectReference: {fileID: 0}
     - target: {fileID: 6026459678253270554, guid: 9d06e88e39509e54c952518d06c3b886, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 45.3356
+      value: 47.2213
       objectReference: {fileID: 0}
     - target: {fileID: 6026459678253270555, guid: 9d06e88e39509e54c952518d06c3b886, type: 3}
       propertyPath: m_Size.x

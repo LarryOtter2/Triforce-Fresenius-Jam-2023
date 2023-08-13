@@ -34,12 +34,12 @@ public class EnemyMovement : MonoBehaviour
           else if (transform.position.x > -9f)
               dirX = 1f;
         */
-        rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
+        
     }
 
     void FixedUpdate()
     {
-       
+        rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
     }
 
     /*
