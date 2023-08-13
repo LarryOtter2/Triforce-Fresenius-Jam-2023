@@ -14,11 +14,13 @@ public class Menu : MonoBehaviour
     public GameObject PauseM;
     public bool inPauseM;
 
-    
+
     [SerializeField] Victory victoryScreen;
 
     [SerializeField] GameOver losingScreen;
 
+    [SerializeField] Animator animTitle;
+    [SerializeField] Animator animBackground;
 
     void Awake()
     {
@@ -41,6 +43,8 @@ public class Menu : MonoBehaviour
             Cursor.lockState = CursorLockMode.Confined;
         }
 
+
+
     }
 
 
@@ -53,9 +57,10 @@ public class Menu : MonoBehaviour
 
     public void CloseMainMenu()
     {
-        Time.timeScale = 1;
-        MainM.SetActive(false);
+        StartCoroutine(CloseMainMenuCoroutine());
         inMainM = false;
+        Time.timeScale = 1;
+        Debug.Log("MainMenu closed successfully.");
     }
 
     public void PauseMenu()
@@ -88,7 +93,7 @@ public class Menu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) && !victoryScreen.isWinning && !losingScreen.isLosing)
         {
-            
+
 
             if (inPauseM == false && inMainM == false)
             {
@@ -103,6 +108,28 @@ public class Menu : MonoBehaviour
             }
         }
     }
+
+
+
+    private IEnumerator CloseMainMenuCoroutine()
+    {
+        animTitle.SetTrigger("Play");
+        animBackground.SetTrigger("Play");
+        // Warte eine gewisse Zeit, während die Animation abgespielt wird
+        Debug.Log("Animation played.");
+        float animationDuration = 0.5f; 
+        yield return new WaitForSeconds(animationDuration);
+
+        // Deaktiviere das Hauptmenü und setze Time.timeScale auf 1
+        MainM.SetActive(false);
+        
+
+    }
+
+
+
+
+
 
 
 }
